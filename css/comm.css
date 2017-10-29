@@ -1,0 +1,272 @@
+/*头部*/
+
+/*头部主体*/
+#sec-top {
+    text-align: center;
+}
+header div.top-sec {
+    width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+header div.top-sec > ul {
+    display: inline-block;
+}
+header div.top-sec > ul   a {
+    font-weight: 400;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #333;
+}
+header div.top-sec > ul > li.active a {
+  color: #31C27C;
+}
+header div.top-sec > ul > li a:hover {
+    background: none;
+    color: #31C27C;
+}
+ul li{
+    float: left;
+}
+ul,dt,dd,dl,li,p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#header .header-top {
+    width: 1200px;
+}
+#header a img {
+    margin-top: 20px;
+}
+#header .navbar-nav {
+    margin-left: 20px;
+}
+#header .form-group {
+    text-align: center;
+    position: relative;
+}
+#header .form-group span {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    color: #bbb;
+}
+#header .navbar-form a {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*模态框*/
+#myModal .modal-header ul.nav{
+    display: inline-block;
+}
+#myModal .modal-header .close{
+    margin-top:8px;
+}
+
+#myModal .modal-footer ul {
+    list-style: none;
+    float: right;
+}
+#myModal .modal-footer label {
+    float: left;
+}
+#myModal .modal-footer .form-group {
+    display: inline-block;
+    float: left;
+}
+#myModal .modal-footer input {
+
+}
+#myModal .modal-body .nav{
+    display: inline-block;
+
+}
+#myModal .modal-footer ul li {
+    float: left;
+}
+#myModal .modal-footer ul li a {
+    color: #333;
+    padding: 0px 8px;
+}
+#myModal .modal-footer ul li a:hover {
+    text-decoration: none;
+    color:blue;
+}
+#myModal .modal-footer ul li b {
+    border-left: 1px solid #000;
+    font-size: 9px;
+}
+
+/*footer*/
+#footer-bottom a:hover{
+    color:#31C37C;
+    text-decoration: none;
+}
+#footer-bottom{
+    background: #333;
+    height: 600px;
+    color:#fff;
+}
+#footer-bottom .footer-sec{
+    width: 1200px;
+    margin: 0px auto;
+    padding-top:50px;
+    color:#bbb;
+}
+#footer-bottom .footer-sec ul li{
+    float:left;
+    margin-right:20px ;
+}
+#footer-bottom .footer-sec .nav>li{
+    display: inline-block;
+    width: 30%;
+}
+#footer-bottom .footer-sec ul li p{
+    margin-bottom:50px;
+    margin-left:20px;
+}
+#footer-bottom .footer-sec ul li dl{
+    display: inline-block;
+    width: 22%;
+    text-align: center;
+}
+#footer-bottom .footer-sec ul li dl dt{
+    margin-bottom:5px;
+}
+#footer-bottom .footer-sec ul li dl>a{
+    display: inline;
+}
+#footer-bottom .footer-sec ul li dl dt i{
+    display: inline-block;
+    width: 44px;
+    height: 48px;
+    background: url(../img/footer.png)  -0px -0px;
+}
+#footer-bottom .footer-sec ul li dl.mac dt i{
+
+    background: url(../img/footer.png)  -93px -0px;
+}
+#footer-bottom .footer-sec ul li dl.android dt i{
+
+    background: url(../img/footer.png)  -185px 0px;
+}
+#footer-bottom .footer-sec ul li dl.iphone dt i{
+
+    background: url(../img/footer.png)  -276px 0px;
+}
+#footer-bottom .footer-sec ul li dl.k dt i{
+
+    background: url(../img/footer.png)  -365px -0px;
+}
+#footer-bottom .footer-sec ul li dl.super dt i{
+
+    background: url(../img/footer.png)  -460px 0px;
+}
+#footer-bottom .footer-sec ul li dl.play dt i{
+
+    background: url(../img/footer.png)  -560px 0px;
+}
+#footer-bottom .footer-sec ul li dl.super{
+    width: 33%;
+}
+#footer-bottom a{
+    color:#bbbbbb;
+    display: inline-block;
+    width: 112px;
+}
+#footer-bottom .text-center>div>div{
+    margin-top:15px;
+
+}
+#footer-bottom .footer-music{
+    margin-top:40px;
+}
+#footer-bottom .footer-music>a+a{
+    padding:0px 10px;
+    margin-left:40px;
+}
+#footer-bottom .footer-nav{
+    margin-top:50px;
+}
+#footer-bottom .footer-nav ul{
+    display: inline-block;
+}
+#footer-bottom .footer-nav ul li{
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
+#footer-bottom .footer-nav ul li b{
+    border-left: 1px solid #bbb;
+}
+#footer-bottom .footer-nav  a{
+    display: inline;
+    margin: 0px 8px;
+}
+#footer-bottom .footer-nav  p{
+    margin-top:10px;
+}
+#footer-bottom .p-footer{
+    margin-top:80px;
+}
+.footer-sec p{
+    margin-top:15px;
+    margin-left:18px;
+}
+
+.changBig{
+    transform: scale(1.1);
+    transition: all 0.5s linear;
+}
+.changSmall{
+    transform: scale(1);
+    transition: all 0.5s linear;
+}
+dl b,.phb-list b,.pic_singer a strong{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    margin-left:-35px;
+    margin-top:-35px;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+    background: url('../img/cover_play.png');
+    z-index: 9;
+}
+.pic-a>a{
+   display: inline-block;
+}
+.usercenter>div.mid{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s linear;
+}
+.usercenter h1{
+    font-size:50px;
+}
+.usercenter  h3{
+    margin:30px auto;
+}
+.navbar{
+    margin-bottom: 0px;
+}
+.usercenter .btn-success.focus{
+    border-color:none;
+}
+a{
+    color:#333;
+}
+li.active a{
+    color: #31C27C;
+}
+a:hover{
+    color:#31C27C;
+    text-decoration: none;
+}

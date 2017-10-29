@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!--2、指定视口信息-->
+    <meta name="viewport" content="width=device-width,initial-scale=0.3,user-scalable=no"/>
+    <!--3、指定跨IE浏览器兼容性-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <title></title>
+    <!--4、引入 Bootstrap.css-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/comm.css"/>
+    <!--5、引入两个兼容性文件(老IE)-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .usercenter{
+            width: 100%;
+            background: #EBEBEB;
+            text-align:center;
+            color:#333;
+            position: relative;
+
+        }
+        section .singer{
+            width: 1200px;
+            margin:20px auto;
+            box-sizing: border-box;
+
+        }
+        .singer>div:first-child{
+            padding-top:30px;
+            padding-bottom:30px;
+
+
+        }
+        .pic_singer{
+            margin: 20px 0px;
+            text-align: center;
+        }
+        .singer div:first-child a{
+            padding: 0px 12px ;
+        }
+        .singer span{
+            padding:5px 12px;
+            background: #31C27C;
+            color: #ffffff;
+        }
+        .singer p{
+            line-height: 40px;
+        }
+        .pic_singer li{
+            width: 18%;
+            background: #FBFBFD;
+        }
+        .singer .name_list li{
+            width: 18%;
+
+            padding:20px 0px;
+        }
+        .pic_singer li+li,.name_list li+li{
+            margin-left:2.5% ;
+        }
+        .pic_singer a,.pic_singer img{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .singer .page{
+            text-align: center;
+        }
+        .singer ul.nav-pills{
+            display: inline-block;
+        }
+        .nav > li > a:focus,.nav > li > a:hover{
+            background: #31C27C;
+            color:#fff;
+        }
+        b.a_title{
+            color: #000000;
+            margin-right:20px;
+        }
+        b.a_title:hover{
+            color:#000;
+        }
+        .pic_singer a{
+            position: relative;
+        }
+        .pic_singer div~div a,.pic_singer div~div{
+            color:#666;
+        }
+        .pic_singer div~div a:hover{
+            color: #31C27C;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default" id="header">
+        <div class="container">
+            <div class="navbar-header ">
+                <a href="#"><img src="img/logo.png" alt=""/></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCol">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="navbar-collapse collapse  header-top" id="myCol">
+                <ul class="nav nav-pills navbar-nav">
+                    <li class="active" data-toggle="tab"><a href="index.html">音乐馆</a></li>
+                    <li  data-toggle="tab"><a href="usercenter.html">我的音乐</a></li>
+                    <li data-toggle="tab"><a href="#">客户端</a></li>
+                    <li data-toggle="tab"><a href="#">音乐号</a></li>
+                    <li data-toggle="tab"><a href="#"> &nbsp;&nbsp;VIP&nbsp;&nbsp; </a></li>
+                </ul>
+
+                <div class="navbar-right navbar-form">
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="中国新歌声第二季"/>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                    <a href="#myModal" data-toggle="modal">登录</a>
+                    <button type="button" class="btn btn-success">
+                        开通绿钻豪华版
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--2.模态框-->
+    <div class="modal text-center" id="myModal" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>
+                    <ul class="nav nav-pills inli">
+                        <li class="active"><a class="qq_erweimaLogin" href="#">QQ登录</a></li>
+                        <li><a href="#" class="weixinLogin">微信登录</a></li>
+
+                    </ul>
+                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal">
+                        &times;
+                    </button>
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <h1>快速安全登录</h1>
+
+                    <p>请使用 <a href="#">QQ手机版</a>扫描二维码,</p>
+
+                    <p>或点击头像授权登录</p>
+                    <ul class="nav">
+                        <li><img src="img/erweima.png" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <label class="left checkbox-inline"><input type="checkbox"/>下次自动登录</label>
+                    </div>
+                    <ul class="clearfix">
+                        <li><a href="#" class="qqLogin">帐号密码登录</a></li>
+                        <li><b></b><a href="#">注册新帐号</a></li>
+                        <li><b></b><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-sec clearfix">
+        <ul class="nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">歌手</a></li>
+            <li  class="active"><a href="#">专辑</a></li>
+            <li><a href="#">排行榜</a></li>
+            <li><a href="#">分类歌单</a></li>
+            <li><a href="#">电台</a></li>
+            <li><a href="#">MV</a></li>
+            <li><a href="#">数字专辑</a></li>
+        </ul>
+    </div>
+</header>
+<section>
+    <div class="usercenter">
+        <div  class="singer text-left">
+            <div>
+                <p>
+                    <b class="a_title">语种</b>
+                    <span>全部</span>
+                    <a href="#">国语</a>
+                    <a href="#">英语</a>
+                    <a href="#">韩语</a>
+                    <a href="#">日语</a>
+                    <a href="#">法语</a>
+                    <a href="#">西班牙语</a>
+                </p>
+                <p>
+                    <b class="a_title">流派</b>
+                    <span>全部</span>
+                    <a href="#">流行</a>
+                    <a href="#">古典</a>
+                    <a href="#">爵士</a>
+                    <a href="#">摇滚</a>
+                    <a href="#">电子</a>
+                    <a href="#">拉丁</a>
+                    <a href="#">轻音乐</a>
+                    <a href="#">世界音乐</a>
+                    <a href="#">嘻哈</a>
+                    <a href="#">原声</a>
+                    <a href="#">乡村</a>
+                    <a href="#">舞曲</a>
+                    <a href="#">R&B</a>
+                    <a href="#">民谣</a>
+                    <a href="#">金属</a>
+                </p>
+                <p>
+                    <b class="a_title">价格</b>
+                    <span>全部</span>
+                    <a href="#">免费</a>
+                    <a href="#">付费</a>
+                </p>
+                <p>
+                    <b class="a_title">筛选</b>
+                    <a href="#" class="">类别 <i class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#">年代 <i class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#">唱片公司<i class="glyphicon glyphicon-chevron-down"></i></a>
+                </p>
+            </div>
+            <h3>全部专辑</h3>
+            <div class="pic">
+                <ul class="pic_singer clearfix">
+                    <li>
+                        <a href="">
+                            <strong></strong>
+                            <img src="img/sing_pic101.jpg" alt=""/>
+                        </a>
+                        <div><a href="#">夏洛特烦恼 电影原声带</a></div>
+                        <div><a href="#">华语群星</a></div>
+                        <div>2015-10-20</div>
+                    </li>
+                    <li><a href=""><strong></strong><img src="img/pic_singer102.jpg" alt=""/></a> <div><a href="#">夏洛特烦恼 电影原声带</a></div>
+                        <div><a href="#">华语群星</a></div>
+                        <div>2015-10-20</div></li>
+                    <li><a href=""><strong></strong><img src="img/pic_singer103.jpg" alt=""/></a> <div><a href="#">夏洛特烦恼 电影原声带</a></div>
+                        <div><a href="#">华语群星</a></div>
+                        <div>2015-10-20</div></li>
+                    <li><a href=""><strong></strong><img src="img/pic_singer104.jpg" alt=""/></a> <div><a href="#">夏洛特烦恼 电影原声带</a></div>
+                        <div><a href="#">华语群星</a></div>
+                        <div>2015-10-20</div></li>
+                    <li><a href=""><strong></strong><img src="img/pic_singer105.jpg" alt=""/></a> <div><a href="#">夏洛特烦恼 电影原声带</a></div>
+                        <div><a href="#">华语群星</a></div>
+                        <div>2015-10-20</div></li>
+                </ul>
+                <ul class="pic_singer clearfix">
+                    <li><a href=""><strong></strong><img src="img/sing_pic101.jpg" alt=""/></a> <div><a href="#">夏洛特烦恼 电影原声带</a></div>
+                        <div><a href="#">华语群星</a></div>
+                        <div>2015-10-20</div></li>
+                    <li><a href=""><strong></strong><img src="img/pic_singer102.jpg" alt=""/></a> <div><a href="#">夏洛特烦恼 电影原声带</a></div>
+                        <div><a href="#">华语群星</a></div>
+                        <div>2015-10-20</div></li>
+                    <li><a href=""><strong></strong><img src="img/pic_singer103.jpg" alt=""/></a> <div><a href="#">夏洛特烦恼 电影原声带</a></div>
+                        <div><a href="#">华语群星</a></div>
+                        <div>2015-10-20</div></li>
+                    <li><a href=""><strong></strong><img src="img/pic_singer104.jpg" alt=""/></a> <div><a href="#">夏洛特烦恼 电影原声带</a></div>
+                        <div><a href="#">华语群星</a></div>
+                        <div>2015-10-20</div></li>
+                    <li><a href=""><strong></strong><img src="img/pic_singer105.jpg" alt=""/></a> <div><a href="#">夏洛特烦恼 电影原声带</a></div>
+                        <div><a href="#">华语群星</a></div>
+                        <div>2015-10-20</div></li>
+
+                </ul>
+            </div>
+
+
+        <div class="page">
+            <ul class="nav nav-pills">
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">...</a></li>
+                <li><a href="">5526</a></li>
+                <li><a href="">&gt;</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</section>
+<footer>
+
+</footer>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/comm.js"></script>
+<script>
+    $(".pic_singer a").hover(
+            function () {
+                var $this = $(this);
+                $this.find("strong").animate({
+                    opacity: 1
+                }, 200).attr("class", "changBig");
+                $this.find('img').attr("class", "changBig")
+            },
+            function () {
+                var $this = $(this);
+                $this.find("strong").animate({
+                    opacity: 0
+                }, 200).attr("class", "changSmall");
+                $this.find('img').attr("class", "changSmall")
+            }
+    );
+</script>
+</body>
+
+
+

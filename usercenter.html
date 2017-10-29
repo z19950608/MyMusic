@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!--2、指定视口信息-->
+    <meta name="viewport" content="width=device-width,initial-scale=0.3,user-scalable=no"/>
+    <!--3、指定跨IE浏览器兼容性-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <title></title>
+    <!--4、引入 Bootstrap.css-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/comm.css"/>
+    <!--5、引入两个兼容性文件(老IE)-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .usercenter{
+            width: 100%;
+            background: url('img/bg_profile_unlogin.jpg') 50% no-repeat;
+            background-size: cover;
+            min-height: 300px;
+            max-height: 900px;
+            text-align:center;
+            color:#fff;
+            position: relative;
+
+        }
+        .gly a {
+            color: #000;
+            padding: 2px 10px;
+            border: 1px solid #666;
+        }
+        .row {
+            margin: 20px 0px;
+        }
+
+        section {
+            color: #000
+        }
+
+        section a {
+            color: #000;
+            padding: 0px 6px;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        .gly a:hover {
+            color: #000;
+            padding: 2px 10px;
+            border: 1px solid #fff;
+        }
+
+        .caozuo {
+            visibility: hidden;
+
+        }
+        #header{
+            background: none;
+        }
+
+        i.glyphicon {
+            vertical-align: -1px;
+            margin-right: 10px;
+            color: #000;
+        }
+
+
+        audio  {
+            margin: 60px 0px;
+            width: 90%;
+
+            bottom:50px;
+        }
+        .audioList{
+            height: 90%;
+
+        }
+        /*.fenye ul.nav-pills li a:focus,.fenye ul.nav-pills li a:hover{*/
+            /*background: green;*/
+            /*color:#fff;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default" id="header">
+        <div class="container">
+            <div class="navbar-header ">
+                <a href="#"><img src="img/logo.png" alt=""/></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCol">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="navbar-collapse collapse  header-top" id="myCol">
+                <ul class="nav nav-pills navbar-nav">
+                    <li  data-toggle="tab"><a href="index.html">音乐馆</a></li>
+                    <li class="active" data-toggle="tab"><a href="usercenter.html">我的音乐</a></li>
+                    <li data-toggle="tab"><a href="#">客户端</a></li>
+                    <li data-toggle="tab"><a href="#">音乐号</a></li>
+                    <li data-toggle="tab"><a href="#"> &nbsp;&nbsp;VIP&nbsp;&nbsp; </a></li>
+                </ul>
+
+                <div class="navbar-right navbar-form">
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="中国新歌声第二季"/>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                    <a href="#myModal" data-toggle="modal">登录</a>
+                    <button type="button" class="btn btn-success">
+                        开通绿钻豪华版
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--2.模态框-->
+    <div class="modal text-center" id="myModal" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>
+                    <ul class="nav nav-pills inli">
+                        <li class="active"><a class="qq_erweimaLogin" href="#">QQ登录</a></li>
+                        <li><a href="#" class="weixinLogin">微信登录</a></li>
+
+                    </ul>
+                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal">
+                        &times;
+                    </button>
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <h1>快速安全登录</h1>
+
+                    <p>请使用 <a href="#">QQ手机版</a>扫描二维码,</p>
+
+                    <p>或点击头像授权登录</p>
+                    <ul class="nav">
+                        <li><img src="img/erweima.png" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <label class="left checkbox-inline"><input type="checkbox"/>下次自动登录</label>
+                    </div>
+                    <ul class="clearfix">
+                        <li><a href="#" class="qqLogin">帐号密码登录</a></li>
+                        <li><b></b><a href="#">注册新帐号</a></li>
+                        <li><b></b><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<section>
+    <div class="usercenter">
+        <div class="mid">
+            <h1 class="title">私人音乐空间,听我想听的歌</h1>
+            <h3>登录管理我的音乐,多终端同步</h3>
+            <button href="#myModal" class="btn-success btn btn-lg" data-toggle="modal">立即登录</button>
+        </div>
+    </div>
+    <div class="music_list">
+        <div class="container">
+            <div class="row">
+                <div class="gly">
+                    <a href="#"><i class="glyphicon glyphicon-heart-empty"></i>收藏</a>
+                    <a href="#"><i class="glyphicon glyphicon-plus"></i>添加到</a>
+                    <a href="#"><i class="glyphicon glyphicon-download-alt"></i>下载</a>
+                    <a href="#"><i class="glyphicon glyphicon-trash "></i>删除</a>
+                    <a href="#"><i class="glyphicon glyphicon-remove"></i>清空列表</a>
+                </div>
+            </div>
+            <div class="audioList">
+                <div class="row">
+                    <div class="col-xs-12 left">
+
+                        <i class="glyphicon glyphicon-headphones"></i>歌曲
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1 left">
+                        <input type="checkbox"/>
+                    </div>
+                    <div class="col-xs-3 left">
+                        <span>1 Papillon(live)</span>
+                    </div>
+                    <div class="caozuo col-xs-3 right">
+                        <a href="#"><i class="glyphicon glyphicon-play"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i></a>
+                    </div>
+                    <div class="col-xs-3 right">
+                        <span><a href="#">王嘉尔</a>/<a href="#">GAI</a></span>
+                    </div>
+                    <div class="col-xs-2 right">
+                <span>02:53<a href="#"><i class="caozuo glyphicon glyphicon-trash"></i></a>
+                </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1 left">
+                        <input type="checkbox"/>
+                    </div>
+                    <div class="col-xs-3 left">
+                        <span>1 Papillon(live)</span>
+                    </div>
+                    <div class="caozuo col-xs-3 right">
+                        <a href="#"><i class="glyphicon glyphicon-play"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i></a>
+                    </div>
+                    <div class="col-xs-3 right">
+                        <span><a href="#">王嘉尔</a>/<a href="#">GAI</a></span>
+                    </div>
+                    <div class="col-xs-2 right">
+                <span>02:53<a href="#"><i class="caozuo glyphicon glyphicon-trash"></i></a>
+                </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1 left">
+                        <input type="checkbox"/>
+                    </div>
+                    <div class="col-xs-3 left">
+                        <span>1 Papillon(live)</span>
+                    </div>
+                    <div class="caozuo col-xs-3 right">
+                        <a href="#"><i class="glyphicon glyphicon-play"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i></a>
+                    </div>
+                    <div class="col-xs-3 right">
+                        <span><a href="#">王嘉尔</a>/<a href="#">GAI</a></span>
+                    </div>
+                    <div class="col-xs-2 right">
+                <span>02:53<a href="#"><i class="caozuo glyphicon glyphicon-trash"></i></a>
+                </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1 left">
+                        <input type="checkbox"/>
+                    </div>
+                    <div class="col-xs-3 left">
+                        <span>1 Papillon(live)</span>
+                    </div>
+                    <div class="caozuo col-xs-3 right">
+                        <a href="#"><i class="glyphicon glyphicon-play"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i></a>
+                    </div>
+                    <div class="col-xs-3 right">
+                        <span><a href="#">王嘉尔</a>/<a href="#">GAI</a></span>
+                    </div>
+                    <div class="col-xs-2 right">
+                <span>02:53<a href="#"><i class="caozuo glyphicon glyphicon-trash"></i></a>
+                </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1 left">
+                        <input type="checkbox"/>
+                    </div>
+                    <div class="col-xs-3 left">
+                        <span>1 Papillon(live)</span>
+                    </div>
+                    <div class="caozuo col-xs-3 right">
+                        <a href="#"><i class="glyphicon glyphicon-play"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i></a>
+                    </div>
+                    <div class="col-xs-3 right">
+                        <span><a href="#">王嘉尔</a>/<a href="#">GAI</a></span>
+                    </div>
+                    <div class="col-xs-2 right">
+                <span>02:53<a href="#"><i class="caozuo glyphicon glyphicon-trash"></i></a>
+                </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1 left">
+                        <input type="checkbox"/>
+                    </div>
+                    <div class="col-xs-3 left">
+                        <span>1 Papillon(live)</span>
+                    </div>
+                    <div class="caozuo col-xs-3 right">
+                        <a href="#"><i class="glyphicon glyphicon-play"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i></a>
+                    </div>
+                    <div class="col-xs-3 right">
+                        <span><a href="#">王嘉尔</a>/<a href="#">GAI</a></span>
+                    </div>
+                    <div class="col-xs-2 right">
+                <span>02:53<a href="#"><i class="caozuo glyphicon glyphicon-trash"></i></a>
+                </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1 left">
+                        <input type="checkbox"/>
+                    </div>
+                    <div class="col-xs-3 left">
+                        <span>1 Papillon(live)</span>
+                    </div>
+                    <div class="caozuo col-xs-3 right">
+                        <a href="#"><i class="glyphicon glyphicon-play"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i></a>
+                    </div>
+                    <div class="col-xs-3 right">
+                        <span><a href="#">王嘉尔</a>/<a href="#">GAI</a></span>
+                    </div>
+                    <div class="col-xs-2 right">
+                <span>02:53<a href="#"><i class="caozuo glyphicon glyphicon-trash"></i></a>
+                </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1 left">
+                        <input type="checkbox"/>
+                    </div>
+                    <div class="col-xs-3 left">
+                        <span>1 Papillon(live)</span>
+                    </div>
+                    <div class="caozuo col-xs-3 right">
+                        <a href="#"><i class="glyphicon glyphicon-play"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i></a>
+                    </div>
+                    <div class="col-xs-3 right">
+                        <span><a href="#">王嘉尔</a>/<a href="#">GAI</a></span>
+                    </div>
+                    <div class="col-xs-2 right">
+                <span>02:53<a href="#"><i class="caozuo glyphicon glyphicon-trash"></i></a>
+                </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1 left">
+                        <input type="checkbox"/>
+                    </div>
+                    <div class="col-xs-3 left">
+                        <span>1 Papillon(live)</span>
+                    </div>
+                    <div class="caozuo col-xs-3 right">
+                        <a href="#"><i class="glyphicon glyphicon-play"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i></a>
+                    </div>
+                    <div class="col-xs-3 right">
+                        <span><a href="#">王嘉尔</a>/<a href="#">GAI</a></span>
+                    </div>
+                    <div class="col-xs-2 right">
+                <span>02:53<a href="#"><i class="caozuo glyphicon glyphicon-trash"></i></a>
+                </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="fenye text-center">
+                <ul class="nav nav-pills">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                </ul>
+            </div>
+            <div class="audio_play">
+                <audio   src="audio/Blue_Skies.mp3" autoplay="autoplay" controls class="block"></audio>
+            </div>
+            </div>
+    </div>
+</section>
+<footer>
+
+</footer>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/comm.js" ></script>
+<script>
+//    根据每个页面显示10条数据，我要分多少页
+
+    (function myLogin(){
+        if(sessionStorage.getItem("uname")!="undefined"&&sessionStorage.getItem("uname")){
+            $(".music_list").show();
+            $(".usercenter").height('300');
+            toShow();
+            toPage(0,8);
+        }else{
+            $(".music_list").hide();
+            $(".usercenter").height('800')
+        }
+    })();
+//    显示我的歌单内容
+    function toPage(page,num){
+        console.log(1);
+     $.ajax({
+        url:"data/myList.php",
+        data:{page:page,pagenum:num,uid:sessionStorage.getItem('uid')},
+        success:function(data){
+            console.log(data);
+            var str=`<div class="row">
+                        <div class="col-xs-12 left">
+                        <i class="glyphicon glyphicon-headphones"></i>歌曲
+                        </div>
+                    </div> `;
+            var n=0;
+            for(var val of data){
+                n++;
+                str+=`
+                <div class="row">
+                 <div class="col-xs-1 left">
+                        <input type="checkbox"/>
+                    </div>
+                    <div class="col-xs-3 left">
+                        <span> ${n+"  "+val.pname}</span>
+                    </div>
+                    <div class="caozuo col-xs-3 right">
+                        <a class="play" href="#"><i class="glyphicon glyphicon-play"></i></a>
+                        <a class="plus" data-id=${val.pid} href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a class="share" href="#"><i class="glyphicon glyphicon-share"></i></a>
+                    </div>
+                    <div class="col-xs-3 right">
+                        <span><a href="#">${val.maker}</a></span>
+                    </div>
+                    <div class="col-xs-2 right">
+                <span>02:53<a href="#" class="del"><i class="caozuo  glyphicon glyphicon-trash"></i></a>
+                </span>
+                    </div>
+                    </div>
+            `
+            }
+            $(".audioList").html(str);
+        },
+        error:function(){console.log(page)}
+    });
+}
+    function toShow(){
+        var fenye=$(".fenye");
+        fenye.css("marginTop","20px").children('ul').css("display","inline-block");
+        $('.music_list').on("click",'.fenye li a',function(e){
+            e.preventDefault();
+            var $this=$(this);
+            $this.parent().addClass('active').siblings().removeClass('active');
+            var index=$this.parent().index();
+             toPage(index,8);
+        });
+        $.ajax({
+           url:'data/totalpage.php',
+            data:{uid:sessionStorage.getItem('uid')},
+            success:function(data){
+                var pages=data.page;
+                console.log(data.page)
+                var offset=8;
+                var listNum=Math.ceil(pages/offset);
+                var str=' <li class="active"><a href="#">1</a></li>';
+                for(var i=2;i<=listNum;i++){
+                    str+=`
+                         <li><a href="#">${i}</a></li>
+                    `
+                }
+
+                fenye.children('ul').html(str);
+
+            },
+            error:function(){}
+        })
+    }
+//    显示操作功能
+    $(".audioList").on("mouseenter",".row",function(){
+        var $this=$(this);
+        $this.find(".caozuo").css("visibility","visible");
+
+    }).on("mouseleave",".row",function(){
+        var $this=$(this);
+        $this.find(".caozuo").css("visibility","hidden");
+    })
+    //    删除功能
+    $(".audioList").on("click",".del",function(){
+        var $this=$(this);
+        $this.parents(".row").remove();
+        var pid=$this.parents(".row").find(".plus").data('id');
+        console.log(pid);
+        $.ajax({
+            url:'data/del_myList.php',
+            data:{pid:pid},
+            success:function(data){
+                alert(data.msg);
+            },
+            error:function(){
+                alert('网络错误,请重试')
+            }
+        })
+    }).on('click','.plus',function(e){
+        e.preventDefault();
+        var pid=$(this).data('id');
+        console.log(pid);
+        $.ajax({
+            url:'data/addmusic.php',
+            data:{uid:sessionStorage.getItem('uid'),pid:pid},
+            success:function(data){
+                alert(data.msg);
+            },
+            error:function(){
+                alert('网络错误,请重试')
+            }
+        })
+    });
+</script>
+</body>
+
+
+

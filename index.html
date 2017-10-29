@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!--2、指定视口信息-->
+    <meta name="viewport" content="width=device-width,initial-scale=0.8,user-scalable=yes"/>
+    <!--3、指定跨IE浏览器兼容性-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <title></title>
+    <!--4、引入 Bootstrap.css-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/comm.css"/>
+    <!--5、引入两个兼容性文件(老IE)-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--1.导航头部分-->
+<header>
+
+    <nav class="navbar navbar-default" id="header">
+        <div class="container">
+            <div class="navbar-header ">
+                <a href="#"><img src="img/logo.png" alt=""/></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCol">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="navbar-collapse collapse  header-top" id="myCol">
+                <ul class="nav nav-pills navbar-nav">
+                    <li class="active" data-toggle="tab"><a href="#">音乐馆</a></li>
+                    <li data-toggle="tab"><a href="usercenter.html">我的音乐</a></li>
+                    <li data-toggle="tab"><a href="#">客户端</a></li>
+                    <li data-toggle="tab"><a href="#">音乐号</a></li>
+                    <li data-toggle="tab"><a href="#"> &nbsp;&nbsp;VIP&nbsp;&nbsp; </a></li>
+                </ul>
+
+                <div class="navbar-right navbar-form">
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="中国新歌声第二季"/>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                    <a href="#myModal" data-toggle="modal">登录</a>
+                    <button type="button" class="btn btn-success">
+                        开通绿钻豪华版
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--2.模态框-->
+    <div class="modal text-center" id="myModal" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>
+                    <ul class="nav nav-pills inli">
+                        <li class="active"><a class="qq_erweimaLogin" href="#">用户登录</a></li>
+                        <li><a href="#" class="weixinLogin">微信登录</a></li>
+
+                    </ul>
+                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal">
+                        &times;
+                    </button>
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <h1>快速安全登录</h1>
+
+                    <p>请使用 <a href="#">QQ手机版</a>扫描二维码,</p>
+
+                    <p>或点击头像授权登录</p>
+                    <ul class="nav">
+                        <li><img src="img/erweima.png" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <label class="left checkbox-inline"><input type="checkbox"/>下次自动登录</label>
+                    </div>
+                    <ul class="clearfix">
+                        <li><a href="#" class="qqLogin">帐号密码登录</a></li>
+                        <li><b></b><a href="#">注册新帐号</a></li>
+                        <li><b></b><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-sec clearfix">
+        <ul class="nav">
+            <li class="active"><a  href="#">首页</a></li>
+            <li><a href="singer.html">歌手</a></li>
+            <li><a href="#">专辑</a></li>
+            <li><a href="#">排行榜</a></li>
+            <li><a href="#">分类歌单</a></li>
+            <li><a href="#">电台</a></li>
+            <li><a href="#">MV</a></li>
+            <li><a href="#">数字专辑</a></li>
+        </ul>
+    </div>
+</header>
+<!--3.头部主体部分-->
+<section >
+<div id="sec-top">
+    <div class="middle-sec clearfix">
+        <span class="btn-left"><b></b></span>
+        <span class="btn-right"><b></b></span>
+
+        <div class="top-title">
+            <h1>新歌首发</h1>
+        </div>
+
+        <!--头部主体导航-->
+        <ul class="nav center-block" id="pages" >
+            <li><a href="#">内地</a></li>
+            <li><a href="#">港台</a></li>
+            <li><a href="#">欧美</a></li>
+            <li><a href="#">韩国</a></li>
+            <li><a href="#">日本</a></li>
+        </ul>
+
+        <!--tab栏部分-->
+        <div class="top-list">
+            <ul class="nav" id="productList">
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="play_music.html"><img class="img-responsive" src="img/list2.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt><a href="">歌谣<span>…</span></a>
+
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list2.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt><a href="">歌谣<span>…</span></a>
+
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list3.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="play_music.html"><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="play_music.html"><img class="img-responsive" src="img/list4.jpg" alt=""/></a>
+                        </div>
+                        <dt><a href="">歌谣<span>…</span></a>
+
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="play_music.html"><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list3.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt><a href="">歌谣<span>…</span></a>
+
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list2.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="play_music.html"><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt><a href="">歌谣<span>…</span></a>
+
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list3.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt><a href="">歌谣<span>…</span></a>
+
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list4.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href=""><img class="img-responsive" src="img/list1.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="">歌谣<span>…</span></a>
+                        </dt>
+                        <dd>
+                            李荣浩
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <ul class="list-index">
+            <li class="active">——</li>
+            <li>——</li>
+            <li>——</li>
+            <li>——</li>
+        </ul>
+    </div>
+</div>
+<!--4.轮播图部分-->
+-
+<div id="sec-middle">
+    <div class="middle-sec">
+
+        <div class="top-title">
+            <h1><i class="i-left"></i>精彩推荐 <i class="i-right"></i></h1>
+        </div>
+        <div class="sec-center clearfix">
+            <span class="btn-left"><b></b></span>
+            <span class="btn-right"><b></b></span>
+
+            <div class="pic ">
+                <ul class="nav ">
+                    <li class="p1"><a href=""><img class="img-responsive" src="img/131396.jpg" alt=""/></a></li>
+                    <li class="p2"><a href=""><img class="img-responsive" src="img/135197.jpg" alt=""/></a></li>
+                    <li class="p3"><a href=""><img class="img-responsive" src="img/135212.jpg" alt=""/></a></li>
+                    <li class="p4"><a href=""><img class="img-responsive" src="img/135337.jpg" alt=""/></a></li>
+                    <li class="p5"><a href=""><img class="img-responsive" src="img/135348.jpg" alt=""/></a></li>
+                    <li class="p6"><a href=""><img class="img-responsive" src="img/135353.jpg" alt=""/></a></li>
+                    <li class="p7"><a href=""><img class="img-responsive" src="img/135392.jpg" alt=""/></a></li>
+                    <li class="p8"><a href=""><img class="img-responsive" src="img/135877.jpg" alt=""/></a></li>
+                    <li class="p9"><a href=""><img class="img-responsive" src="img/135894.jpg" alt=""/></a></li>
+                </ul>
+            </div>
+            <ul class="list-index">
+                <li class="dark-active">——</li>
+                <li>——</li>
+                <li>——</li>
+                <li>——</li>
+                <li>——</li>
+                <li>——</li>
+                <li>——</li>
+                <li>——</li>
+                <li>——</li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+<!--排行榜部分-->
+<div id="sec-phb">
+    <div class="middle-sec clearfix">
+        <div class="top-title">
+            <h1 class="text-center">排行榜 </i></h1>
+
+            <p class="text-right"><a href="#">全部&gt;</a></p>
+        </div>
+        <div class="phb-list">
+            <ul>
+                <li>
+                    <div></div>
+                    <dl>
+
+                        <dt>
+                        <p class="text-center">巅峰榜</p>
+
+                        <h2 class="text-center">流行指数</h2>
+                        </dt>
+
+                        <dd>
+                            <span>1</span> <a href="">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>2</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>3</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>4</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <div></div>
+                    <dl>
+
+                        <dt>
+                        <p class="text-center">巅峰榜</p>
+
+                        <h2 class="text-center">流行指数</h2>
+                        </dt>
+
+                        <dd>
+                            <span>1</span> <a href="">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>2</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>3</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>4</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <div></div>
+                    <dl>
+
+                        <dt>
+                        <p class="text-center">巅峰榜</p>
+
+                        <h2 class="text-center">流行指数</h2>
+                        </dt>
+
+                        <dd>
+                            <span>1</span> <a href="">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>2</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>3</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>4</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <div></div>
+                    <dl>
+
+                        <dt>
+                        <p class="text-center">巅峰榜</p>
+
+                        <h2 class="text-center">流行指数</h2>
+                        </dt>
+
+                        <dd>
+                            <span>1</span> <a href="">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>2</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>3</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                        <dd>
+                            <span>4</span> <a href="#">歌谣</a>
+
+                            <p>李荣浩</p>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!--热门歌单部分-->
+-
+<div id="bottom-middle">
+    <div class="middle-sec">
+        <span class="btn-left"><b></b></span>
+        <span class="btn-right"><b></b></span>
+
+        <div class="top-title">
+            <h1><i class="i-left"></i>热门歌单 <i class="i-right"></i></h1>
+        </div>
+        <div class="sec-center">
+            <div class="top-list">
+                <ul class="nav" id="hot-gd">
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd1.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd2.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd3.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd5.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd1.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd2.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd3.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd5.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd1.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd2.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd3.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd5.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd1.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd2.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd3.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd5.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd1.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd2.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd3.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <div class="pic-a">
+                                <a href=""><img class="img-responsive" src="img/gd5.jpg" alt=""/></a></div>
+                            <dt>
+                                <a href="">古韵诗词之七字绝句，落花时节又逢君<span>…</span></a>
+                            </dt>
+                            <dd>
+                                播放量:
+                                <output>20.0万</output>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <ul class="list-index">
+                <li class="dark-active">——</li>
+                <li>——</li>
+                <li>——</li>
+            </ul>
+        </div>
+
+        <!--<a href="#"><img  src="img/135197.jpg" alt=""/></a>-->
+        <!--</div>-->
+    </div>
+</div>
+
+
+<!--底部部分-->
+<div id="footer">
+    <div class="middle-sec clearfix">
+        <div class="top-title">
+            <h1><i class="i-left"></i>MV首播 <i class="i-right"></i></h1>
+        </div>
+        <div class="sec-center clearfix">
+            <ul class="nav nav-pills top-nav">
+                <li><a href="">全部</a></li>
+                <li><a href="">内地</a></li>
+                <li><a href="">港台</a></li>
+                <li><a href="">欧美</a></li>
+                <li><a href="">韩国</a></li>
+                <li><a href="">日本</a></li>
+            </ul>
+            <a class="right" href="">全部 &gt;</a>
+            <ul class="mv-nav clearfix">
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="#"> <img class="img-responsive" src="img/mv01.jpg" alt=""/></a>
+                        </div>
+
+                        <dt>
+                            <a href="#">歌谣</a>
+                        </dt>
+                        <dd>
+                            <a href="#">李荣浩</a>
+                        </dd>
+                        <dd>
+                            <span><i></i>7.8万</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="#"> <img class="img-responsive" src="img/mv02.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="#">歌谣</a>
+                        </dt>
+                        <dd>
+                            <a href="#">李荣浩</a>
+                        </dd>
+                        <dd>
+                            <span><i></i>7.8万</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="#"> <img class="img-responsive" src="img/mv03.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="#">歌谣</a>
+                        </dt>
+                        <dd>
+                            <a href="#">李荣浩</a>
+                        </dd>
+                        <dd>
+                            <span><i></i>7.8万</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="#"> <img class="img-responsive" src="img/mv04.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="#">歌谣</a>
+                        </dt>
+                        <dd>
+                            <a href="#">李荣浩</a>
+                        </dd>
+                        <dd>
+                            <span><i></i>7.8万</span>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="mv-nav clearfix">
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="#"> <img class="img-responsive" src="img/mv05.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="#">歌谣</a>
+                        </dt>
+                        <dd>
+                            <a href="#">李荣浩</a>
+                        </dd>
+                        <dd>
+                            <span><i></i>7.8万</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="#"> <img class="img-responsive" src="img/mv06.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="#">歌谣</a>
+                        </dt>
+                        <dd>
+                            <a href="#">李荣浩</a>
+                        </dd>
+                        <dd>
+                            <span><i></i>7.8万</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="#"> <img class="img-responsive" src="img/mv07.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="#">歌谣</a>
+                        </dt>
+                        <dd>
+                            <a href="#">李荣浩</a>
+                        </dd>
+                        <dd>
+                            <span><i></i>7.8万</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <div class="pic-a">
+                            <a href="#"> <img class="img-responsive" src="img/mv08.jpg" alt=""/></a>
+                        </div>
+                        <dt>
+                            <a href="#">歌谣</a>
+                        </dt>
+                        <dd>
+                            <a href="#">李荣浩</a>
+                        </dd>
+                        <dd>
+                            <span><i></i>7.8万</span>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+
+        <!--<a href="#"><img  src="img/135197.jpg" alt=""/></a>-->
+        <!--</div>-->
+    </div>
+</div>
+</section>
+<!--js加载footer部分-->
+<footer ></footer>
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!--6、引入 行为依赖 文件-->
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/comm.js"></script>
+<script src="js/index.js"></script>
+<script src="js/productList.js"></script>
+
+</body>
+</html>

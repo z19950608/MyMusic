@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!--2、指定视口信息-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <!--3、指定跨IE浏览器兼容性-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <title></title>
+    <!--4、引入 Bootstrap.css-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <!--5、引入两个兼容性文件(老IE)-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+            .navbar-header img{
+                vertical-align: -2px;
+                margin-right:20px;
+            }
+            .navbar-header a{
+               color:#333;
+
+            }
+            .navbar a:hover{
+                color:#31C27C;
+                text-decoration: none;
+
+            }
+         .navbar-nav li{
+             margin-left:30px;
+             margin-right:30px;
+
+         }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus{
+                background: none;
+                color:#31C27C;
+            }
+   .form-control,input[type=button]{
+            height: 50px;
+            line-height: 50px;
+
+        }
+        h1{
+            font-size: 50px;
+        }
+        .rt{
+            float:right;
+        }
+        h2{
+            margin-bottom: 50px;
+            margin-top: 30px;
+        }
+       option{
+            height: 40px;
+            line-height: 40px;
+            font-size: 25px;
+        }
+        section{
+            color:#666;
+        }
+        .checkbox{
+            margin-top:30px;
+            margin-bottom: 30px;
+        }
+        footer{
+            margin-top:30px;
+        }
+            .navbar-nav span{
+                margin-right: 5px;
+            }
+            .alert{
+                visibility: hidden;
+            }
+
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header ">
+              <h1><a href="#"><img  src="img/qqLogo.png" alt=""/>QQ</a></h1>
+            </div>
+            <div class="navbar-collapse collapse  header-top navbar-right" >
+                <ul class="nav  navbar-nav">
+                    <li  ><a class="mail" href="mailRegister.html"><span class="glyphicon glyphicon-envelope"></span>邮箱地址</a></li>
+                    <li class="dropdown" ><a data-toggle="dropdown">简体中文 <span class="glyphicon glyphicon-menu-down "></span>
+                    <ul class="dropdown-menu-left dropdown-menu">
+                        <li><a href="#">繁体中文</a></li>
+                        <li><a href="#">English</a></li>
+                    </ul>
+                    </a></li>
+                    <li ><a href="#">意见反馈</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<section>
+    <div class="container">
+        <h1 >双迎注册QQ</h1>
+        <h2>每一天，乐在沟通 <a class="rt" href="#">免费靓号</a></h2>
+        <div class="form-group">
+            <input type="text" id="uname" name="uname" class="form-control" placeholder="昵称"/>
+            <div class="alert alert-danger">
+               昵称不可以为空或少于3个字符串
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" id="upwd" name="upwd" class="form-control" placeholder="密码"/>
+            <div class="alert-danger alert">
+                <p>
+                    密码不能为空
+                </p>
+                <p>
+                   长度为6到16个字符串
+                </p>
+                <p>
+                    必须包含字母，数字，符号中至少两个
+                </p>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-4">
+                <select class="form-control" name="" id="">
+                    <option value="">中国+86</option>
+                    <option value="">中国香港特别行政区+852</option>
+                    <option value="">中国澳门特别行政区+853</option>
+                    <option value="">台湾+886</option>
+                </select>
+            </div>
+            <div class="col-md-8 col-xs-12 rt"><input id="tel" name="tel" type="text" class="form-control"  placeholder="手机号码"/></div>
+        </div>
+        <div class="alert-danger alert">
+
+            手机格式不正确
+
+        </div>
+        <p>可通过手机号找回密码</p>
+        <input type="button" id="res" class="btn btn-primary btn-block "value="立即注册" disabled="true"/>
+        <div class="checkbox">
+            <label for="" class="form-inline"><input type="checkbox"/> 同时开通QQ空间</label>
+        </div>
+        <div>
+        <label for="" class="form-inline"><input id="che" type="checkbox"/> 我已阅读并同意相关服务条款和隐私政策</label>
+        </div>
+    </div>
+</section>
+<footer>
+    <p class="text-center">
+       Copyriht <span>&copy;</span>'1998-'2017Tencent All Rights Reserved
+    </p>
+</footer>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+
+    var nameRes=/^\w{3,20}$/;
+    var uname=$("#uname");
+    var pwdRes=/^[a-zA-Z0-9]{6,16}$/;
+    var upwd=$("#upwd");
+    var telRes=/^1[3578]\d{9}$/;
+    var tel=$("#tel");
+    var che=$("#che");
+    console.log(che.prop('checked'));
+
+
+
+//    注册功能
+    $("#res").click(function(){
+        console.log(1);
+        $.ajax({
+            url:'data/add_user.php',
+            data:{uname:uname.val(),upwd:upwd.val(),tel:tel.val()},
+            success:function(data){
+                if(data.code>0){
+                    alert(data.msg+' 三秒后跳转到首页');
+                   setTimeout(function(){location.href='index.html'},3000)
+                }
+
+            },
+            error:function(){}
+        })
+    });
+
+    console.log();
+    // 对每个表单控件进行验证
+    uname.blur(function(){if(nameRes.test(uname.val())){
+        uname.next().css("visibility","hidden")
+    }else{
+        uname.next().css("visibility","visible")
+    }
+    check();
+    });
+    upwd.blur(function(){if(pwdRes.test(upwd.val())){
+        upwd.next().css("visibility","hidden")
+    }else{
+        upwd.next().css("visibility","visible")
+    } check();});
+    tel.blur(function(){if(telRes.test(tel.val())){
+        tel.parent().parent().next().css("visibility","hidden")
+    }else{
+        tel.parent().parent().next().css("visibility","visible")
+    } check();});
+    che.click(function(){
+        check()
+    });
+    console.log(che.prop('checked'))
+
+//    封装一个check函数 方便调用,测试提交按钮是否可用
+    function check(){
+        if(nameRes.test(uname.val())&&pwdRes.test(upwd.val())&&telRes.test(tel.val())&&che.prop('checked')){
+            $("#res").prop("disabled",false)
+        }else{
+            $("#res").prop("disabled",true)
+        }
+    }
+
+</script>
+</body>
+
+
+

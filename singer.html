@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!--2、指定视口信息-->
+    <meta name="viewport" content="width=device-width,initial-scale=0.3,user-scalable=no"/>
+    <!--3、指定跨IE浏览器兼容性-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <title></title>
+    <!--4、引入 Bootstrap.css-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/comm.css"/>
+    <!--5、引入两个兼容性文件(老IE)-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .usercenter{
+            width: 100%;
+            background: url('img/bg_singer.jpg') 50% no-repeat;
+            background-size: cover;
+            min-height: 400px;
+            max-height: 900px;
+            text-align:center;
+            color:#fff;
+            position: relative;
+
+        }
+
+        .usercenter .btn{
+            background: transparent;
+            border: 1px solid #666;
+        }
+        .usercenter .btn:hover{
+            color:#fff;
+            border: 1px solid #fff;
+        }
+        section .singer{
+            width: 1200px;
+            margin:20px auto;
+            box-sizing: border-box;
+
+        }
+        .singer>div:first-child{
+            padding:30px;
+
+            background: #FBFBFD;
+        }
+        .pic_singer{
+            margin: 20px 0px;
+            text-align: center;
+        }
+        .singer div:first-child a{
+            padding: 0px 12px ;
+        }
+        .singer span{
+            padding:5px 12px;
+            background: #31C27C;
+            color: #ffffff;
+        }
+        .singer p{
+            line-height: 30px;
+        }
+        .pic_singer li{
+            width: 18%;
+            background: #FBFBFD;
+            padding:20px 0px;
+        }
+       .singer .name_list li{
+           width: 18%;
+
+           padding:20px 0px;
+        }
+        .pic_singer li+li,.name_list li+li{
+            margin-left:2.5% ;
+        }
+        .pic_singer a,.pic_singer img{
+            display: inline-block;
+            width: 140px;
+            height: 140px;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+        .singer .page{
+            text-align: center;
+        }
+        .singer ul.nav-pills{
+            display: inline-block;
+        }
+        .singer ul.nav-pills li{
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default" id="header">
+        <div class="container">
+            <div class="navbar-header ">
+                <a href="#"><img src="img/logo.png" alt=""/></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCol">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="navbar-collapse collapse  header-top" id="myCol">
+                <ul class="nav nav-pills navbar-nav">
+                    <li class="active" data-toggle="tab"><a href="index.html">音乐馆</a></li>
+                    <li  data-toggle="tab"><a href="usercenter.html">我的音乐</a></li>
+                    <li data-toggle="tab"><a href="#">客户端</a></li>
+                    <li data-toggle="tab"><a href="#">音乐号</a></li>
+                    <li data-toggle="tab"><a href="#"> &nbsp;&nbsp;VIP&nbsp;&nbsp; </a></li>
+                </ul>
+
+                <div class="navbar-right navbar-form">
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="中国新歌声第二季"/>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                    <a href="#myModal" data-toggle="modal">登录</a>
+                    <button type="button" class="btn btn-success">
+                        开通绿钻豪华版
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--2.模态框-->
+    <div class="modal text-center" id="myModal" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>
+                    <ul class="nav nav-pills inli">
+                        <li class="active"><a class="qq_erweimaLogin" href="#">QQ登录</a></li>
+                        <li><a href="#" class="weixinLogin">微信登录</a></li>
+
+                    </ul>
+                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal">
+                        &times;
+                    </button>
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <h1>快速安全登录</h1>
+
+                    <p>请使用 <a href="#">QQ手机版</a>扫描二维码,</p>
+
+                    <p>或点击头像授权登录</p>
+                    <ul class="nav">
+                        <li><img src="img/erweima.png" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <label class="left checkbox-inline"><input type="checkbox"/>下次自动登录</label>
+                    </div>
+                    <ul class="clearfix">
+                        <li><a href="#" class="qqLogin">帐号密码登录</a></li>
+                        <li><b></b><a href="#">注册新帐号</a></li>
+                        <li><b></b><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-sec clearfix">
+        <ul class="nav">
+            <li><a href="#">首页</a></li>
+            <li class="active"><a href="#">歌手</a></li>
+            <li><a href="#">专辑</a></li>
+            <li><a href="#">排行榜</a></li>
+            <li><a href="#">分类歌单</a></li>
+            <li><a href="#">电台</a></li>
+            <li><a href="#">MV</a></li>
+            <li><a href="#">数字专辑</a></li>
+        </ul>
+    </div>
+</header>
+<section>
+    <div class="usercenter">
+        <div class="mid">
+            <h1 class="title">万千歌手 尽在眼前</h1>
+            <h3>登录查看你关注的歌手</h3>
+            <button href="#myModal" class=" btn btn-lg" data-toggle="modal">立即登录</button>
+        </div>
+    </div>
+    <div  class="singer">
+        <div>
+            <p>
+                <span>全部</span>
+                <a href="#">华语男</a>
+                <a href="#">华语女</a>
+                <a href="#">华语组合</a>
+                <a href="#">韩国男</a>
+                <a href="#">韩国女</a>
+                <a href="#">韩国组合</a>
+                <a href="#">日本男</a>
+                <a href="#">日本女</a>
+                <a href="#">日本组合</a>
+                <a href="#">欧美男</a>
+                <a href="#">欧美女</a>
+                <a href="#">欧美组合</a>
+                <a href="#">乐团</a>
+                <a href="#">演奏家</a>
+                <a href="#">作曲家</a>
+                <a href="#">指挥家</a>
+                <a href="#">其他</a>
+            </p>
+            <p>
+                <span>热门</span>
+                <a href="#">A</a>
+                <a href="#">B</a>
+                <a href="#">C</a>
+                <a href="#">D</a>
+                <a href="#">E</a>
+                <a href="#">F</a>
+                <a href="#">G</a>
+                <a href="#">H</a>
+                <a href="#">I</a>
+                <a href="#">J</a>
+                <a href="#">K</a>
+                <a href="#">L</a>
+                <a href="#">M</a>
+                <a href="#">N</a>
+                <a href="#">O</a>
+                <a href="#">P</a>
+                <a href="#">Q</a>
+                <a href="#">R</a>
+                <a href="#">S</a>
+                <a href="#">T</a>
+                <a href="#">U</a>
+                <a href="#">V</a>
+                <a href="#">W</a>
+                <a href="#">X</a>
+                <a href="#">Y</a>
+                <a href="#">Z</a>
+                <a href="#">#</a>
+            </p>
+        </div>
+        <div class="pic">
+            <ul class="pic_singer clearfix">
+                <li><a href=""><img src="img/sing_pic101.jpg" alt=""/></a><p>薛之谦</p></li>
+                <li><a href=""><img src="img/pic_singer102.jpg" alt=""/></a><p>周杰伦</p></li>
+                <li><a href=""><img src="img/pic_singer103.jpg" alt=""/></a><p>周杰伦</p></li>
+                <li><a href=""><img src="img/pic_singer104.jpg" alt=""/></a><p>周杰伦</p></li>
+                <li><a href=""><img src="img/pic_singer105.jpg" alt=""/></a><p>周杰伦</p></li>
+            </ul>
+            <ul class="pic_singer clearfix">
+                <li><a href=""><img src="img/sing_pic101.jpg" alt=""/></a><p>周杰伦</p></li>
+                <li><a href=""><img src="img/pic_singer102.jpg" alt=""/></a><p>周杰伦</p></li>
+                <li><a href=""><img src="img/pic_singer103.jpg" alt=""/></a><p>周杰伦</p></li>
+                <li><a href=""><img src="img/pic_singer104.jpg" alt=""/></a><p>周杰伦</p></li>
+                <li><a href=""><img src="img/pic_singer105.jpg" alt=""/></a><p>周杰伦</p></li>
+
+            </ul>
+        </div>
+        <div class="singer_name">
+          <ul class="name_list  clearfix">
+              <li>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+              </li>
+              <li>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+              </li>
+              <li>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+              </li>
+              <li>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+              </li>
+              <li>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+                  <p><a href="#">刘若英</a></p>
+              </li>
+          </ul>
+        </div>
+        <div class="page">
+            <ul class="nav nav-pills">
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">...</a></li>
+                <li><a href="">5526</a></li>
+                <li><a href="">&gt;</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<footer>
+
+</footer>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/comm.js"></script>
+</body>
+
+
+
